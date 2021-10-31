@@ -16,6 +16,11 @@
 		C34631BC272EBA6300949D5A /* Messenger_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631BB272EBA6300949D5A /* Messenger_AppTests.swift */; };
 		C34631C6272EBA6300949D5A /* Messenger_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631C5272EBA6300949D5A /* Messenger_AppUITests.swift */; };
 		C34631C8272EBA6300949D5A /* Messenger_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631C7272EBA6300949D5A /* Messenger_AppUITestsLaunchTests.swift */; };
+		C34631DC272EC11B00949D5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631DB272EC11B00949D5A /* LoginViewController.swift */; };
+		C34631DE272EC14500949D5A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631DD272EC14500949D5A /* RegisterViewController.swift */; };
+		C34631E0272EC15D00949D5A /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631DF272EC15D00949D5A /* NewConversationViewController.swift */; };
+		C34631E2272EC16B00949D5A /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631E1272EC16B00949D5A /* ConversationViewController.swift */; };
+		C34631E4272EC18800949D5A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631E3272EC18800949D5A /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		C34631C1272EBA6300949D5A /* Messenger-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Messenger-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34631C5272EBA6300949D5A /* Messenger_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger_AppUITests.swift; sourceTree = "<group>"; };
 		C34631C7272EBA6300949D5A /* Messenger_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C34631DB272EC11B00949D5A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C34631DD272EC14500949D5A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C34631DF272EC15D00949D5A /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
+		C34631E1272EC16B00949D5A /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		C34631E3272EC18800949D5A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,14 @@
 		C34631A3272EBA6200949D5A /* Messenger-App */ = {
 			isa = PBXGroup;
 			children = (
+				C34631D4272EBFF800949D5A /* Resources */,
 				C34631A4272EBA6200949D5A /* AppDelegate.swift */,
 				C34631A6272EBA6200949D5A /* SceneDelegate.swift */,
 				C34631A8272EBA6200949D5A /* ViewController.swift */,
-				C34631AA272EBA6200949D5A /* Main.storyboard */,
+				C34631D5272EC01500949D5A /* Views */,
 				C34631AD272EBA6300949D5A /* Assets.xcassets */,
-				C34631AF272EBA6300949D5A /* LaunchScreen.storyboard */,
+				C34631D6272EC02400949D5A /* Controllers */,
+				C34631E5272EC19100949D5A /* Models */,
 				C34631B2272EBA6300949D5A /* Info.plist */,
 			);
 			path = "Messenger-App";
@@ -125,6 +137,73 @@
 				C34631C7272EBA6300949D5A /* Messenger_AppUITestsLaunchTests.swift */,
 			);
 			path = "Messenger-AppUITests";
+			sourceTree = "<group>";
+		};
+		C34631D4272EBFF800949D5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C34631D5272EC01500949D5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C34631D7272EC06700949D5A /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C34631D6272EC02400949D5A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C34631DA272EC10300949D5A /* Profile */,
+				C34631D9272EC0EC00949D5A /* Conversation */,
+				C34631D8272EC0CB00949D5A /* Authentication */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C34631D7272EC06700949D5A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C34631AA272EBA6200949D5A /* Main.storyboard */,
+				C34631AF272EBA6300949D5A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C34631D8272EC0CB00949D5A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				C34631DB272EC11B00949D5A /* LoginViewController.swift */,
+				C34631DD272EC14500949D5A /* RegisterViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		C34631D9272EC0EC00949D5A /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				C34631DF272EC15D00949D5A /* NewConversationViewController.swift */,
+				C34631E1272EC16B00949D5A /* ConversationViewController.swift */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		C34631DA272EC10300949D5A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C34631E3272EC18800949D5A /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C34631E5272EC19100949D5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +337,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34631E2272EC16B00949D5A /* ConversationViewController.swift in Sources */,
+				C34631E0272EC15D00949D5A /* NewConversationViewController.swift in Sources */,
 				C34631A9272EBA6200949D5A /* ViewController.swift in Sources */,
+				C34631DE272EC14500949D5A /* RegisterViewController.swift in Sources */,
+				C34631DC272EC11B00949D5A /* LoginViewController.swift in Sources */,
 				C34631A5272EBA6200949D5A /* AppDelegate.swift in Sources */,
+				C34631E4272EC18800949D5A /* ProfileViewController.swift in Sources */,
 				C34631A7272EBA6200949D5A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
