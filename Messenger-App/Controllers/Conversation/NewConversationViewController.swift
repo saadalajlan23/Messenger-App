@@ -12,7 +12,7 @@ class NewConversationViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results.count
     }
-
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = results[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: NewConversationCell.identifier,

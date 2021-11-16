@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate ,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        PasswordNewTextFaild.isSecureTextEntry = true
         StyleButton.clipsToBounds = true
 
         profileImageView.clipsToBounds = true
@@ -46,7 +46,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate ,
     private let database = Database.database().reference()
     @IBAction func TakePhoto(_ sender: Any) {
         showPhoto()
-      database.child("saad1").setValue(["something":true])
+      
     }
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -96,7 +96,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate ,
                 strongSelf.spinner.dismiss()
             }
             guard !exists else {
-                strongSelf.alertUserLoginError(massege: "Look like a user account for that email address already exsist")
+                strongSelf.alertUserLoginError(massege: " that email address already exsist")
                 return
             }
            
@@ -126,13 +126,17 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate ,
             })
         })
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ConversationViewControllerBar")
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
         self.navigationController?.pushViewController(vc, animated: true)
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     
+    }
     func alertUserLoginError(massege: String = "Please enter all Information to creat a new account."){
-        let alert = UIAlertController(title: "Woops", message: massege , preferredStyle: .alert)
+        let alert = UIAlertController(title: "Wrong", message: massege , preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         present(alert, animated: true)
     }

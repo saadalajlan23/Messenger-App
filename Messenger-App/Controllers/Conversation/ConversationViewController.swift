@@ -15,8 +15,11 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
 
 
     @IBOutlet weak var noConversationlabel1: UILabel!
-    @IBOutlet weak var tableView: UITableView!
 
+
+
+    @IBOutlet weak var tableView: UITableView!
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
